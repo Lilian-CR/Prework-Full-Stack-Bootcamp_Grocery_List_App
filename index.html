@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+PE+Guides&display=swap" rel="stylesheet">
+    <title>Grocery List App</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section-center">
+        <!--form-->
+        <form class="grocery-form">
+            <p class="alert"></p>
+            <h3 class="the_title">Grocery List App</h3> 
+            <h4 class="subtitle">If you write it, you don't forget it!!</h4>
+            <h6> Be kind: avoid waste!</h6>
+            <br>
+            <div class="form-control">
+                <input type="text" id="grocery" placeholder="e.g Rice">
+                <button type="submit" class="submit-btn">Submit Item</button>
+            </div>
+        </form>
+
+        <!--list-->
+        <div class="grocery-container">
+            <div class="grocery-list">
+                <article class="grocery-item">
+                    
+                </article>
+            </div>
+            <!-- button -->
+            <button type="button" class="clear-btn">Clear Items</button>
+        </div>
+    </section>
+    
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
