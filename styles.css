@@ -1,75 +1,23 @@
-/*
-=============== 
-Fonts
-===============
-*/
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+PE+Guides&display=swap");
-
-/*
-=============== 
-Variables
-===============
-*/
-
+/* Global Variables */
 :root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(128 12.2% 25%);
-  --clr-primary-2: hsl(128 12.2% 35%);
-  --clr-primary-3: hsl(128 12.2% 45%);
-  --clr-primary-4: hsl(128 12.2% 55%);
-  /* primary/main color */
-  --clr-primary-5: #f2e394;
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(128, 15%, 40%);
-  --clr-primary-7: hsl(128, 25%, 60%);
-  --clr-primary-8: hsl(128, 35%, 70%);
-  --clr-primary-9: hsl(128, 90%, 80%);
-  --clr-primary-10: hsl(128, 100%, 85%);
-  /* darkest green - used for headings */
-  --clr-green-1: hsl(128 12.2% 35%);
-  --clr-green-2: hsl(128 12.2% 40%);
-  --clr-green-3: hsl(128 12.2% 45%);
-  --clr-green-4: hsl(128 12.2% 50%);
-  /* green used for paragraphs */
-  --clr-green-5: hsl(128 12.2% 35%);
-  --clr-green-6: hsl(128 12.2% 35%);
-  --clr-green-7: hsl(128 12.2% 35%);
-  --clr-green-8: hsl(128 12.2% 35%);
-  --clr-green-9: hsl(128 12.2% 35%);
-  --clr-green-10: hsl(128 12.2% 35%);
-  --clr-white: #ffffff;
-  --clr-green-dark: hsl(128 12.2% 35%);
-  --clr-green-light: hsl(128 12.2% 45%);
-  --clr-black: #222222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --clr-green-1: #4e6451;
+  --clr-green-2: #97bc62ff;
+  --clr-green-3: #c9df8a;
+  --clr-green-4: #e3e99b;
+  --clr-green-5: #e8eae6;
+  --ff-primary: "Pacifico", serif;
+  --ff-secondary: "Lato", sans-serif;
+  --clr-black: #2c2c2c;
   --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-}
-/*
-=============== 
-Global Styles
-===============
-*/
-
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --spacing: 0.1rem;
+  --transition: all 0.3s linear;
 }
 
+/* Reset Styles */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure full height */
-  overflow: hidden; /* Prevent unwanted scrollbars */
+  height: 100%;
 }
 
 body {
@@ -80,21 +28,29 @@ body {
   color: var(--clr-green-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img:not(.logo) {
   width: 100%;
 }
+
 img {
   display: block;
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -105,25 +61,31 @@ h4 {
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
   font-family: "Pacifico", serif;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-green-5);
 }
 
-@media screen and (min-width: 800px) {   
+/* Responsive Typography */
+@media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
@@ -140,7 +102,7 @@ p {
     text-align: center;
     color: var(--clr-green-5);
   }
-  .subtitle{
+  .subtitle {
     letter-spacing: 2px;
   }
   body {
@@ -158,8 +120,8 @@ p {
     color: #4e6451;
   }
 }
-/*  global classes */
 
+/* Button Styling */
 .btn {
   text-transform: uppercase;
   background: transparent;
@@ -174,48 +136,58 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
+
 .btn:hover {
   color: var(--clr-white);
   background: var(--clr-black);
 }
-/* section */
+
+/* Section Styling */
 .section {
   padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .section-center {
   min-height: 60vh;
   width: 90vw;
-  margin: 0 auto;
   max-width: 35rem;
-  margin-top: 8rem;
+  margin: 0 auto;
   box-shadow: 0px 2px 2px 0px rgba(55, 155, 93, 0.7);
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Mobile Adjustments */
 @media screen and (max-width: 500px) {
   body {
     background-image: url("Grocery-List-App_Vegetables_Illustration.png");
     background-size: cover;
-    background-position: top left; /* Adjusted for better alignment */
-    height: 100%;
-  } 
+    background-position: top left;
+  }
   .section-center {
     width: 95vw;
-    margin-top: 2rem; /* Reduced margin for smaller screens */
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
 
+/* Tablet Adjustments */
 @media screen and (max-width: 768px) {
   body {
     background-image: url("Grocery-List-App_Vegetables_Illustration.png");
     background-size: cover;
-    background-position: top left; 
-    height: 100%;
-  } 
+    background-position: top left;
+  }
   .section-center {
     width: 85vw;
-    margin-top: 2rem; /* Reduced margin for smaller screens */
     padding: 1.5rem;
   }
 }
