@@ -359,10 +359,3 @@ Grocery List
         width: 600px;
     } 
 }
-  
-@media screen and (max-width: 500px) {
-  .section-center {
-    width: 95vw; /* Use 95% width for mobile devices to maximize space */
-    padding: 1rem; /* Reduce padding for smaller screens */
-  }
-}
