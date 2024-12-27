@@ -40,8 +40,6 @@ Variables
   --clr-white: #ffffff;
   --clr-green-dark: hsl(128 12.2% 35%);
   --clr-green-light: hsl(128 12.2% 45%);
-  --clr-green-dark: hsl(128 12.2% 35%);
-  --clr-green-light: hsl(128 12.2% 45%);
   --clr-black: #222222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -66,13 +64,19 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
 body {
   font-family: var(--ff-secondary);
-  /*background: var(--clr-green-10);*/
   background-image: url("Grocery-List-App_Vegetables_Illustration-3.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
   color: var(--clr-green-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -180,209 +184,38 @@ p {
 }
 
 .section-center {
-  min-height: 60vh; /* Ensures the content box takes up at least 60% of the viewport height */
+  min-height: 60vh;
   width: 90vw;
   margin: 0 auto;
   max-width: 35rem;
   margin-top: 8rem;
   box-shadow: 0px 2px 2px 0px rgba(55, 155, 93, 0.7);
-  
 }
-@media screen and (min-width: 992px) {
+
+@media screen and (max-width: 500px) {
+  body {
+    background-image: url("Grocery-List-App_Vegetables_Illustration.png");
+    background-size: cover;
+    background-position: top left; /* Adjusted for better alignment */
+    height: 100%;
+  } 
   .section-center {
     width: 95vw;
-  }
-
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-/*
-=============== 
-Grocery List
-===============
-*/
-.section-center {
-  background: var(--clr-white);
-  border-radius: var(--radius);
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
-  padding: 2rem;
-}
-.section-center:hover {
-  box-shadow: var(--clr-green-light);
-}
-.alert {
-  margin-bottom: 1rem;
-  height: 1.25rem;
-  display: grid;
-  align-items: center;
-  text-align: center;
-  font-size: 0.7rem;
-  border-radius: 0.25rem;
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-}
-.alert-danger {
-    color: #4e6451;
-    background: #f1e294; 
-}
-.alert-success {
-  color: #ffffff;
-  background: #6a913e;
-}
-.grocery-form h3 {
-  color: var(--clr-primary-1);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.form-control {
-  display: flex;
-  justify-content: center;
-}
-#grocery {
-    padding: 0.25rem;
-    padding-left: 1rem;
-    background: #f2e394;
-    border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);
-    border-color: transparent;
-    font-size: 1rem;
-    flex: 1 0 auto;
-    color: var(--clr-green-1); /* Text color when typing */
-}
-#grocery::placeholder {
-    font-family: var(--ff-secondary);
-    color: var(--clr-green-9);  /* Lighter shade for placeholder */
-    background-color: #f2e394; 
-
-}
-.submit-btn {
-  background: var(--clr-primary-5);
-  border-color: #000000;
-  flex: 0 0 5rem;
-  display: grid;
-  align-items: center;
-  padding: 0.25rem;
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  border-top-right-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-  cursor: pointer;
-  content: var(--clr-primary-5);
-  transition: var(--transition);
-  font-size: 0.85rem;
-}
-.submit-btn:hover {
-  background: var(--clr-primary-3);
-  color: var(--clr-white);
-}
-
-.grocery-container {
-  margin-top: 2rem;
-  transition: var(--transition);
-  visibility: hidden;
-}
-.show-container {
-  visibility: visible;
-}
-.grocery-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  transition: var(--transition);
-  padding: 0.25rem 1rem;
-  border-radius: var(--radius);
-  text-transform: capitalize;
-}
-.grocery-item:hover {
-    color: var(--clr-white);  /* Light color for text */
-    background: var(--clr-primary-3); /* Lighter green for background */
-  }
-  
-  .grocery-item:hover .title {
-    color: var(--clr-white); 
-  }
-.title {
-  margin-bottom: 0;
-  color: var(--clr-green-1);
-  letter-spacing: 2px;
-  transition: var(--transition);
-}
-.edit-btn,
-.delete-btn {
-  background: transparent;
-  border-color: transparent;
-  cursor: pointer;
-  font-size: 0.7rem;
-  margin: 0 0.15rem;
-  transition: var(--transition);
-}
-.edit-btn {
-  color: var(--clr-green-light);
-}
-.edit-btn:hover {
-  color: var(--clr-green-dark);
-}
-.delete-btn {
-  color: var(--clr-green-light);
-}
-.delete-btn:hover {
-  color: var(--clr-green-dark);
-}
-.clear-btn {
-  text-transform: capitalize;
-  width: 10rem;
-  height: 1.5rem;
-  display: grid;
-  align-items: center;
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-green-light);
-  margin: 0 auto;
-  font-size: 0.85rem;
-  letter-spacing: var(--spacing);
-  cursor: pointer;
-  transition: var(--transition);
-  margin-top: 1.25rem;
-}
-.clear-btn:hover {
-  color: var(--clr-green-dark);
-}
-
-@media screen and (max-width: 500px) {
-  body {
-    background-image: url("Grocery-List-App_Vegetables_Illustration.png");
-    background-size: contain;
-    background-position: center center; 
-    height: 100vh;
-    width: 100%;
-  } 
-}
-
-@media screen and (max-width: 500px) {
-  .section-center {
-    width: 95vw; /* 95% width for mobile devices to maximize space */
-    padding: 1rem; /* Reduce padding for smaller screens */
+    margin-top: 2rem; /* Reduced margin for smaller screens */
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   body {
     background-image: url("Grocery-List-App_Vegetables_Illustration.png");
-    background-size: contain;
-    background-position: center center; 
-    height: 100vh;
-    width: 100%;
+    background-size: cover;
+    background-position: top left; 
+    height: 100%;
   } 
-}
-
-@media screen and (max-width: 768px) {
   .section-center {
-    width: 85vw; /* Make content box slightly wider on tablets */
-    padding: 1.5rem; /* Adjust padding for better spacing */
+    width: 85vw;
+    margin-top: 2rem; /* Reduced margin for smaller screens */
+    padding: 1.5rem;
   }
 }
