@@ -41,5 +41,5 @@ Set up the JavaScript file, selecting items from the html doc, setting up our va
 
 ### Resources
 
-- Free Code Camp Youtube tutorial- https://www.youtube.com/watch?v=3PHXvlpOkf4&t=22703s
-- Canva.com 
+- Free Code Camp Youtube tutorial - https://www.youtube.com/watch?v=3PHXvlpOkf4&t=22703s
+- Background Image - https://www.Canva.com 
