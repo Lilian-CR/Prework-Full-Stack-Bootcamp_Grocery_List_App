@@ -353,8 +353,13 @@ Grocery List
 
 
 @media screen and (max-width: 500px) {
-    body{
-        background-image: url("Grocery-List-App_Vegetables_Illustration.png");
-        height: 800px;
-        width: 600px;
-    }
+  body {
+    background-image: url("Grocery-List-App_Vegetables_Illustration.png");
+    background-size: contain;
+    background-position: center center; 
+    height: 100vh;
+    width: 100%;
+  }
+
+  
+}
