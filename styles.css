@@ -351,7 +351,6 @@ Grocery List
   color: var(--clr-green-dark);
 }
 
-
 @media screen and (max-width: 500px) {
   body {
     background-image: url("Grocery-List-App_Vegetables_Illustration.png");
@@ -359,7 +358,29 @@ Grocery List
     background-position: center center; 
     height: 100vh;
     width: 100%;
-  }
+  } 
+}
 
-  
+@media screen and (max-width: 500px) {
+  .section-center {
+    width: 95vw; /* 95% width for mobile devices to maximize space */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("Grocery-List-App_Vegetables_Illustration.png");
+    background-size: contain;
+    background-position: center center; 
+    height: 100vh;
+    width: 100%;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .section-center {
+    width: 85vw; /* Make content box slightly wider on tablets */
+    padding: 1.5rem; /* Adjust padding for better spacing */
+  }
 }
